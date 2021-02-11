@@ -27,13 +27,13 @@ public abstract class Account {
 
     private String name;
 
-//    @GeneratedValue(generator = "uuid2")
-//    @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String acctNumber;
 
     protected double balance;
 
     private double minimumBalance;
+
+    private boolean didPassMinimumBalance;
 
     private double penalty;
 
@@ -75,7 +75,7 @@ public abstract class Account {
         this.balance = balance;
     }
 
-    public double getMinimumBalance() {
+    protected double getMinimumBalance() {
         return minimumBalance;
     }
 
@@ -83,7 +83,14 @@ public abstract class Account {
         this.minimumBalance = minimumBalance;
     }
 
-    public double getPenalty() {
+    protected boolean isDidPassMinimumBalance() {
+        return didPassMinimumBalance;
+    }
+
+    protected void setDidPassMinimumBalance(boolean didPassMinimumBalance) {
+        this.didPassMinimumBalance = didPassMinimumBalance;
+    }
+    protected double getPenalty() {
         return penalty;
     }
 
@@ -91,7 +98,7 @@ public abstract class Account {
         this.penalty = penalty;
     }
 
-    public double getTransactionCharge() {
+    protected double getTransactionCharge() {
         return transactionCharge;
     }
 
@@ -99,7 +106,7 @@ public abstract class Account {
         this.transactionCharge = transactionCharge;
     }
 
-    public double getInterestCharge() {
+    protected double getInterestCharge() {
         return interestCharge;
     }
 
@@ -107,7 +114,7 @@ public abstract class Account {
         this.interestCharge = interestCharge;
     }
 
-    public double getAmount() {
+    protected double getAmount() {
         return amount;
     }
 

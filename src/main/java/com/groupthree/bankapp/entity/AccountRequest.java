@@ -2,7 +2,7 @@ package com.groupthree.bankapp.entity;
 
 public class AccountRequest {
     private String name;
-    private String type;
+    private String account;
 
     public String getName() {
         return name;
@@ -12,12 +12,12 @@ public class AccountRequest {
         this.name = name;
     }
 
-    public String getType() {
-        return type;
+    public String getAccount() {
+        return account;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setAccount(String account) {
+        this.account = account;
     }
 
 }

@@ -4,6 +4,8 @@ import com.groupthree.bankapp.entity.Account;
 import com.groupthree.bankapp.entity.CheckingAccount;
 import com.groupthree.bankapp.entity.InterestAccount;
 import com.groupthree.bankapp.entity.RegularAccount;
+import com.groupthree.bankapp.exception.AccountNotFoundException;
+import com.groupthree.bankapp.exception.AccountTypeNotSupportedException;
 import com.groupthree.bankapp.repository.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,7 +17,10 @@ public class AccountService {
     @Autowired
     AccountRepository repository;
 
-    public Account createAccount(String name, String accType) throws Exception {
+    @Autowired
+    AccountNumberGeneratorService accountNumberGeneratorService;
+
+    public Account createAccount(String name, String accType) throws AccountTypeNotSupportedException {
         Account newAcc;
         switch (accType) {
             case "regular" : {
@@ -31,12 +36,11 @@ public class AccountService {
                 break;
             }
             default: {
-                throw new Exception("account type not supported.");
+                throw new AccountTypeNotSupportedException();
             }
         }
         newAcc.setName(name);
-        // TODO: abstract random number generator for account number and fix formatting
-        newAcc.setAcctNumber(String.valueOf((Math.floor(Math.random() * Math.pow(10, 15)))));
+        newAcc.setAcctNumber(accountNumberGeneratorService.generate());
         repository.save(newAcc);
         return newAcc;
     }
@@ -45,7 +49,16 @@ public class AccountService {
         return repository.findAll();
     }
 
-    public Account getAccountByAccNumber(String accNumber) throws Exception {
+    public Account getAccountByAccNumber(String accNumber) throws AccountNotFoundException {
         return repository.findByAccountNumber(accNumber);
+    }
+
+    public Account updateAccount(Account account) {
+        return repository.save(account);
+    }
+
+    public void deleteAccount(String accId) throws AccountNotFoundException {
+        Account account = this.getAccountByAccNumber(accId);
+        repository.delete(account);
     }
 }

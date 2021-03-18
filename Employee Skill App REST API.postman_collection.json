@@ -1,0 +1,7703 @@
+{
+	"info": {
+		"_postman_id": "9f0622df-6082-4569-a91b-149518c99926",
+		"name": "Employee Skill App REST API",
+		"description": "Basic implementation Banking App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "employees",
+			"item": [
+				{
+					"name": "{employee Id}",
+					"item": [
+						{
+							"name": "skills",
+							"item": [
+								{
+									"name": "{skill Id}",
+									"item": [
+										{
+											"name": "updateEmployeeSkill",
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": [
+														{
+															"key": "token",
+															"value": "{{token}}",
+															"type": "string"
+														}
+													]
+												},
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"description\": \"{{$randomJobArea}}\",\n    \"duration\": {{$randomInt}},\n    \"lastUsed\": \"2020-12-12\"\n}"
+												},
+												"url": {
+													"raw": "{{baseUrl}}/employees/:employeeId/skills/:skillId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"employees",
+														":employeeId",
+														"skills",
+														":skillId"
+													],
+													"variable": [
+														{
+															"key": "employeeId",
+															"value": "2",
+															"description": "(Required) employeeId"
+														},
+														{
+															"key": "skillId",
+															"value": "1",
+															"description": "(Required) skillId"
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [
+															{
+																"description": "Added as a part of security scheme: apikey",
+																"key": "Authorization",
+																"value": "<API Key>"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/employees/:employeeId/skills/:skillId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"employees",
+																":employeeId",
+																"skills",
+																":skillId"
+															],
+															"variable": [
+																{
+																	"key": "employeeId"
+																},
+																{
+																	"key": "skillId"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												},
+												{
+													"name": "Not Found",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [
+															{
+																"description": "Added as a part of security scheme: apikey",
+																"key": "Authorization",
+																"value": "<API Key>"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/employees/:employeeId/skills/:skillId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"employees",
+																":employeeId",
+																"skills",
+																":skillId"
+															],
+															"variable": [
+																{
+																	"key": "employeeId"
+																},
+																{
+																	"key": "skillId"
+																}
+															]
+														}
+													},
+													"status": "Not Found",
+													"code": 404,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												},
+												{
+													"name": "Unauthorized",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [
+															{
+																"description": "Added as a part of security scheme: apikey",
+																"key": "Authorization",
+																"value": "<API Key>"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/employees/:employeeId/skills/:skillId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"employees",
+																":employeeId",
+																"skills",
+																":skillId"
+															],
+															"variable": [
+																{
+																	"key": "employeeId"
+																},
+																{
+																	"key": "skillId"
+																}
+															]
+														}
+													},
+													"status": "Unauthorized",
+													"code": 401,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												},
+												{
+													"name": "Created",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [
+															{
+																"description": "Added as a part of security scheme: apikey",
+																"key": "Authorization",
+																"value": "<API Key>"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/employees/:employeeId/skills/:skillId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"employees",
+																":employeeId",
+																"skills",
+																":skillId"
+															],
+															"variable": [
+																{
+																	"key": "employeeId"
+																},
+																{
+																	"key": "skillId"
+																}
+															]
+														}
+													},
+													"status": "Created",
+													"code": 201,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												},
+												{
+													"name": "Forbidden",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [
+															{
+																"description": "Added as a part of security scheme: apikey",
+																"key": "Authorization",
+																"value": "<API Key>"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/employees/:employeeId/skills/:skillId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"employees",
+																":employeeId",
+																"skills",
+																":skillId"
+															],
+															"variable": [
+																{
+																	"key": "employeeId"
+																},
+																{
+																	"key": "skillId"
+																}
+															]
+														}
+													},
+													"status": "Forbidden",
+													"code": 403,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										},
+										{
+											"name": "deleteEmployeeSkill",
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": [
+														{
+															"key": "token",
+															"value": "{{token}}",
+															"type": "string"
+														}
+													]
+												},
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/employees/:employeeId/skills/:skillId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"employees",
+														":employeeId",
+														"skills",
+														":skillId"
+													],
+													"variable": [
+														{
+															"key": "employeeId",
+															"value": "4",
+															"description": "(Required) employeeId"
+														},
+														{
+															"key": "skillId",
+															"value": "1",
+															"description": "(Required) skillId"
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"description": "Added as a part of security scheme: apikey",
+																"key": "Authorization",
+																"value": "<API Key>"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/employees/:employeeId/skills/:skillId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"employees",
+																":employeeId",
+																"skills",
+																":skillId"
+															],
+															"variable": [
+																{
+																	"key": "employeeId"
+																},
+																{
+																	"key": "skillId"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												},
+												{
+													"name": "Forbidden",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"description": "Added as a part of security scheme: apikey",
+																"key": "Authorization",
+																"value": "<API Key>"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/employees/:employeeId/skills/:skillId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"employees",
+																":employeeId",
+																"skills",
+																":skillId"
+															],
+															"variable": [
+																{
+																	"key": "employeeId"
+																},
+																{
+																	"key": "skillId"
+																}
+															]
+														}
+													},
+													"status": "Forbidden",
+													"code": 403,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												},
+												{
+													"name": "Unauthorized",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"description": "Added as a part of security scheme: apikey",
+																"key": "Authorization",
+																"value": "<API Key>"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/employees/:employeeId/skills/:skillId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"employees",
+																":employeeId",
+																"skills",
+																":skillId"
+															],
+															"variable": [
+																{
+																	"key": "employeeId"
+																},
+																{
+																	"key": "skillId"
+																}
+															]
+														}
+													},
+													"status": "Unauthorized",
+													"code": 401,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												},
+												{
+													"name": "No Content",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"description": "Added as a part of security scheme: apikey",
+																"key": "Authorization",
+																"value": "<API Key>"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/employees/:employeeId/skills/:skillId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"employees",
+																":employeeId",
+																"skills",
+																":skillId"
+															],
+															"variable": [
+																{
+																	"key": "employeeId"
+																},
+																{
+																	"key": "skillId"
+																}
+															]
+														}
+													},
+													"status": "No Content",
+													"code": 204,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "getEmployeSkills",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/employees/:employeeId/skills?pageNumber=1&pageSize=1&sort=id,asc",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"employees",
+												":employeeId",
+												"skills"
+											],
+											"query": [
+												{
+													"key": "pageNumber",
+													"value": "1"
+												},
+												{
+													"key": "pageSize",
+													"value": "1"
+												},
+												{
+													"key": "sort",
+													"value": "id,asc"
+												}
+											],
+											"variable": [
+												{
+													"key": "employeeId",
+													"value": "4",
+													"description": "(Required) employeeId"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Forbidden",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/employees/:employeeId/skills?offset=13976775&paged=true&pageNumber=13976775&pageSize=13976775&sort.sorted=true&sort.unsorted=true&unpaged=true",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"employees",
+														":employeeId",
+														"skills"
+													],
+													"query": [
+														{
+															"key": "offset",
+															"value": "13976775"
+														},
+														{
+															"key": "paged",
+															"value": "true"
+														},
+														{
+															"key": "pageNumber",
+															"value": "13976775"
+														},
+														{
+															"key": "pageSize",
+															"value": "13976775"
+														},
+														{
+															"key": "sort.sorted",
+															"value": "true"
+														},
+														{
+															"key": "sort.unsorted",
+															"value": "true"
+														},
+														{
+															"key": "unpaged",
+															"value": "true"
+														}
+													],
+													"variable": [
+														{
+															"key": "employeeId"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/employees/:employeeId/skills?offset=13976775&paged=true&pageNumber=13976775&pageSize=13976775&sort.sorted=true&sort.unsorted=true&unpaged=true",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"employees",
+														":employeeId",
+														"skills"
+													],
+													"query": [
+														{
+															"key": "offset",
+															"value": "13976775"
+														},
+														{
+															"key": "paged",
+															"value": "true"
+														},
+														{
+															"key": "pageNumber",
+															"value": "13976775"
+														},
+														{
+															"key": "pageSize",
+															"value": "13976775"
+														},
+														{
+															"key": "sort.sorted",
+															"value": "true"
+														},
+														{
+															"key": "sort.unsorted",
+															"value": "true"
+														},
+														{
+															"key": "unpaged",
+															"value": "true"
+														}
+													],
+													"variable": [
+														{
+															"key": "employeeId"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Not Found",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/employees/:employeeId/skills?offset=13976775&paged=true&pageNumber=13976775&pageSize=13976775&sort.sorted=true&sort.unsorted=true&unpaged=true",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"employees",
+														":employeeId",
+														"skills"
+													],
+													"query": [
+														{
+															"key": "offset",
+															"value": "13976775"
+														},
+														{
+															"key": "paged",
+															"value": "true"
+														},
+														{
+															"key": "pageNumber",
+															"value": "13976775"
+														},
+														{
+															"key": "pageSize",
+															"value": "13976775"
+														},
+														{
+															"key": "sort.sorted",
+															"value": "true"
+														},
+														{
+															"key": "sort.unsorted",
+															"value": "true"
+														},
+														{
+															"key": "unpaged",
+															"value": "true"
+														}
+													],
+													"variable": [
+														{
+															"key": "employeeId"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/employees/:employeeId/skills?offset=13976775&paged=true&pageNumber=13976775&pageSize=13976775&sort.sorted=true&sort.unsorted=true&unpaged=true",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"employees",
+														":employeeId",
+														"skills"
+													],
+													"query": [
+														{
+															"key": "offset",
+															"value": "13976775"
+														},
+														{
+															"key": "paged",
+															"value": "true"
+														},
+														{
+															"key": "pageNumber",
+															"value": "13976775"
+														},
+														{
+															"key": "pageSize",
+															"value": "13976775"
+														},
+														{
+															"key": "sort.sorted",
+															"value": "true"
+														},
+														{
+															"key": "sort.unsorted",
+															"value": "true"
+														},
+														{
+															"key": "unpaged",
+															"value": "true"
+														}
+													],
+													"variable": [
+														{
+															"key": "employeeId"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "addEmployeeSkill",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"description\": \"{{$randomJobArea}}\",\n    \"duration\": {{$randomInt}},\n    \"lastUsed\": \"1992-01-12\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/employees/:employeeId/skills",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"employees",
+												":employeeId",
+												"skills"
+											],
+											"variable": [
+												{
+													"key": "employeeId",
+													"value": "4",
+													"description": "(Required) employeeId"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Unauthorized",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/employees/:employeeId/skills",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"employees",
+														":employeeId",
+														"skills"
+													],
+													"variable": [
+														{
+															"key": "employeeId"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Not Found",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/employees/:employeeId/skills",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"employees",
+														":employeeId",
+														"skills"
+													],
+													"variable": [
+														{
+															"key": "employeeId"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/employees/:employeeId/skills",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"employees",
+														":employeeId",
+														"skills"
+													],
+													"variable": [
+														{
+															"key": "employeeId"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Forbidden",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/employees/:employeeId/skills",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"employees",
+														":employeeId",
+														"skills"
+													],
+													"variable": [
+														{
+															"key": "employeeId"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Created",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: apikey",
+														"key": "Authorization",
+														"value": "<API Key>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/employees/:employeeId/skills",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"employees",
+														":employeeId",
+														"skills"
+													],
+													"variable": [
+														{
+															"key": "employeeId"
+														}
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "getEmployeeById",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/employees/:employeeId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"employees",
+										":employeeId"
+									],
+									"variable": [
+										{
+											"key": "employeeId",
+											"value": "13976775",
+											"description": "(Required) employeeId"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/employees/:employeeId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"employees",
+												":employeeId"
+											],
+											"variable": [
+												{
+													"key": "employeeId"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/employees/:employeeId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"employees",
+												":employeeId"
+											],
+											"variable": [
+												{
+													"key": "employeeId"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/employees/:employeeId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"employees",
+												":employeeId"
+											],
+											"variable": [
+												{
+													"key": "employeeId"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/employees/:employeeId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"employees",
+												":employeeId"
+											],
+											"variable": [
+												{
+													"key": "employeeId"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "updateEmployee",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"firstName\": \"dolor sed\",\n    \"lastName\": \"sed voluptate qui\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/employees/:employeeId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"employees",
+										":employeeId"
+									],
+									"variable": [
+										{
+											"key": "employeeId",
+											"value": "1",
+											"description": "(Required) employeeId"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/employees/:employeeId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"employees",
+												":employeeId"
+											],
+											"variable": [
+												{
+													"key": "employeeId"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/employees/:employeeId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"employees",
+												":employeeId"
+											],
+											"variable": [
+												{
+													"key": "employeeId"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/employees/:employeeId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"employees",
+												":employeeId"
+											],
+											"variable": [
+												{
+													"key": "employeeId"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Created",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/employees/:employeeId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"employees",
+												":employeeId"
+											],
+											"variable": [
+												{
+													"key": "employeeId"
+												}
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/employees/:employeeId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"employees",
+												":employeeId"
+											],
+											"variable": [
+												{
+													"key": "employeeId"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "deleteEmployee",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/employees/:employeeId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"employees",
+										":employeeId"
+									],
+									"variable": [
+										{
+											"key": "employeeId",
+											"value": "2",
+											"description": "(Required) employeeId"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/employees/:employeeId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"employees",
+												":employeeId"
+											],
+											"variable": [
+												{
+													"key": "employeeId"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "No Content",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/employees/:employeeId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"employees",
+												":employeeId"
+											],
+											"variable": [
+												{
+													"key": "employeeId"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/employees/:employeeId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"employees",
+												":employeeId"
+											],
+											"variable": [
+												{
+													"key": "employeeId"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/employees/:employeeId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"employees",
+												":employeeId"
+											],
+											"variable": [
+												{
+													"key": "employeeId"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "getAllEmployees",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/employees?pageNumber=1&pageSize=1&sort=id,asc",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"employees"
+							],
+							"query": [
+								{
+									"key": "pageNumber",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "1"
+								},
+								{
+									"key": "sort",
+									"value": "id,asc"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/employees?offset=13976775&paged=true&pageNumber=13976775&pageSize=13976775&sort.sorted=true&sort.unsorted=true&unpaged=true",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"employees"
+									],
+									"query": [
+										{
+											"key": "offset",
+											"value": "13976775"
+										},
+										{
+											"key": "paged",
+											"value": "true"
+										},
+										{
+											"key": "pageNumber",
+											"value": "13976775"
+										},
+										{
+											"key": "pageSize",
+											"value": "13976775"
+										},
+										{
+											"key": "sort.sorted",
+											"value": "true"
+										},
+										{
+											"key": "sort.unsorted",
+											"value": "true"
+										},
+										{
+											"key": "unpaged",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/employees?offset=13976775&paged=true&pageNumber=13976775&pageSize=13976775&sort.sorted=true&sort.unsorted=true&unpaged=true",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"employees"
+									],
+									"query": [
+										{
+											"key": "offset",
+											"value": "13976775"
+										},
+										{
+											"key": "paged",
+											"value": "true"
+										},
+										{
+											"key": "pageNumber",
+											"value": "13976775"
+										},
+										{
+											"key": "pageSize",
+											"value": "13976775"
+										},
+										{
+											"key": "sort.sorted",
+											"value": "true"
+										},
+										{
+											"key": "sort.unsorted",
+											"value": "true"
+										},
+										{
+											"key": "unpaged",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/employees?offset=13976775&paged=true&pageNumber=13976775&pageSize=13976775&sort.sorted=true&sort.unsorted=true&unpaged=true",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"employees"
+									],
+									"query": [
+										{
+											"key": "offset",
+											"value": "13976775"
+										},
+										{
+											"key": "paged",
+											"value": "true"
+										},
+										{
+											"key": "pageNumber",
+											"value": "13976775"
+										},
+										{
+											"key": "pageSize",
+											"value": "13976775"
+										},
+										{
+											"key": "sort.sorted",
+											"value": "true"
+										},
+										{
+											"key": "sort.unsorted",
+											"value": "true"
+										},
+										{
+											"key": "unpaged",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/employees?offset=13976775&paged=true&pageNumber=13976775&pageSize=13976775&sort.sorted=true&sort.unsorted=true&unpaged=true",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"employees"
+									],
+									"query": [
+										{
+											"key": "offset",
+											"value": "13976775"
+										},
+										{
+											"key": "paged",
+											"value": "true"
+										},
+										{
+											"key": "pageNumber",
+											"value": "13976775"
+										},
+										{
+											"key": "pageSize",
+											"value": "13976775"
+										},
+										{
+											"key": "sort.sorted",
+											"value": "true"
+										},
+										{
+											"key": "sort.unsorted",
+											"value": "true"
+										},
+										{
+											"key": "unpaged",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "createEmployee",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\": \"{{$randomFirstName}}\",\n    \"lastName\": \"{{$randomLastName}}\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/employees",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"employees"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/employees",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"employees"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/employees",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"employees"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/employees",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"employees"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/employees",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"employees"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/employees",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"employees"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "oauth",
+			"item": [
+				{
+					"name": "authorize",
+					"item": [
+						{
+							"name": "authorize",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/oauth/authorize?complete=true&name=aliquip&parameters=ut adipisicing nisi Duis",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"oauth",
+										"authorize"
+									],
+									"query": [
+										{
+											"key": "complete",
+											"value": "true"
+										},
+										{
+											"key": "name",
+											"value": "aliquip"
+										},
+										{
+											"key": "parameters",
+											"value": "ut adipisicing nisi Duis",
+											"description": "(Required) parameters"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/authorize?complete=true&name=aliquip&parameters=ut adipisicing nisi Duis",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"authorize"
+											],
+											"query": [
+												{
+													"key": "complete",
+													"value": "true"
+												},
+												{
+													"key": "name",
+													"value": "aliquip"
+												},
+												{
+													"key": "parameters",
+													"value": "ut adipisicing nisi Duis"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/authorize?complete=true&name=aliquip&parameters=ut adipisicing nisi Duis",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"authorize"
+											],
+											"query": [
+												{
+													"key": "complete",
+													"value": "true"
+												},
+												{
+													"key": "name",
+													"value": "aliquip"
+												},
+												{
+													"key": "parameters",
+													"value": "ut adipisicing nisi Duis"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/authorize?complete=true&name=aliquip&parameters=ut adipisicing nisi Duis",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"authorize"
+											],
+											"query": [
+												{
+													"key": "complete",
+													"value": "true"
+												},
+												{
+													"key": "name",
+													"value": "aliquip"
+												},
+												{
+													"key": "parameters",
+													"value": "ut adipisicing nisi Duis"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/authorize?complete=true&name=aliquip&parameters=ut adipisicing nisi Duis",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"authorize"
+											],
+											"query": [
+												{
+													"key": "complete",
+													"value": "true"
+												},
+												{
+													"key": "name",
+													"value": "aliquip"
+												},
+												{
+													"key": "parameters",
+													"value": "ut adipisicing nisi Duis"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "authorize",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "HEAD",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/oauth/authorize?complete=true&name=aliquip&parameters=ut adipisicing nisi Duis",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"oauth",
+										"authorize"
+									],
+									"query": [
+										{
+											"key": "complete",
+											"value": "true"
+										},
+										{
+											"key": "name",
+											"value": "aliquip"
+										},
+										{
+											"key": "parameters",
+											"value": "ut adipisicing nisi Duis",
+											"description": "(Required) parameters"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "HEAD",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/authorize?complete=true&name=aliquip&parameters=ut adipisicing nisi Duis",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"authorize"
+											],
+											"query": [
+												{
+													"key": "complete",
+													"value": "true"
+												},
+												{
+													"key": "name",
+													"value": "aliquip"
+												},
+												{
+													"key": "parameters",
+													"value": "ut adipisicing nisi Duis"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "HEAD",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/authorize?complete=true&name=aliquip&parameters=ut adipisicing nisi Duis",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"authorize"
+											],
+											"query": [
+												{
+													"key": "complete",
+													"value": "true"
+												},
+												{
+													"key": "name",
+													"value": "aliquip"
+												},
+												{
+													"key": "parameters",
+													"value": "ut adipisicing nisi Duis"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "HEAD",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/authorize?complete=true&name=aliquip&parameters=ut adipisicing nisi Duis",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"authorize"
+											],
+											"query": [
+												{
+													"key": "complete",
+													"value": "true"
+												},
+												{
+													"key": "name",
+													"value": "aliquip"
+												},
+												{
+													"key": "parameters",
+													"value": "ut adipisicing nisi Duis"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "No Content",
+									"originalRequest": {
+										"method": "HEAD",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/authorize?complete=true&name=aliquip&parameters=ut adipisicing nisi Duis",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"authorize"
+											],
+											"query": [
+												{
+													"key": "complete",
+													"value": "true"
+												},
+												{
+													"key": "name",
+													"value": "aliquip"
+												},
+												{
+													"key": "parameters",
+													"value": "ut adipisicing nisi Duis"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "approveOrDeny",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/oauth/authorize?approvalParameters=ut adipisicing nisi Duis&complete=true&name=aliquip&user_oauth_approval=aliquip",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"oauth",
+										"authorize"
+									],
+									"query": [
+										{
+											"key": "approvalParameters",
+											"value": "ut adipisicing nisi Duis",
+											"description": "(Required) approvalParameters"
+										},
+										{
+											"key": "complete",
+											"value": "true"
+										},
+										{
+											"key": "name",
+											"value": "aliquip"
+										},
+										{
+											"key": "user_oauth_approval",
+											"value": "aliquip",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/authorize?approvalParameters=ut adipisicing nisi Duis&complete=true&name=aliquip&user_oauth_approval=aliquip",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"authorize"
+											],
+											"query": [
+												{
+													"key": "approvalParameters",
+													"value": "ut adipisicing nisi Duis"
+												},
+												{
+													"key": "complete",
+													"value": "true"
+												},
+												{
+													"key": "name",
+													"value": "aliquip"
+												},
+												{
+													"key": "user_oauth_approval",
+													"value": "aliquip"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/authorize?approvalParameters=ut adipisicing nisi Duis&complete=true&name=aliquip&user_oauth_approval=aliquip",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"authorize"
+											],
+											"query": [
+												{
+													"key": "approvalParameters",
+													"value": "ut adipisicing nisi Duis"
+												},
+												{
+													"key": "complete",
+													"value": "true"
+												},
+												{
+													"key": "name",
+													"value": "aliquip"
+												},
+												{
+													"key": "user_oauth_approval",
+													"value": "aliquip"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Created",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/authorize?approvalParameters=ut adipisicing nisi Duis&complete=true&name=aliquip&user_oauth_approval=aliquip",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"authorize"
+											],
+											"query": [
+												{
+													"key": "approvalParameters",
+													"value": "ut adipisicing nisi Duis"
+												},
+												{
+													"key": "complete",
+													"value": "true"
+												},
+												{
+													"key": "name",
+													"value": "aliquip"
+												},
+												{
+													"key": "user_oauth_approval",
+													"value": "aliquip"
+												}
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/authorize?approvalParameters=ut adipisicing nisi Duis&complete=true&name=aliquip&user_oauth_approval=aliquip",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"authorize"
+											],
+											"query": [
+												{
+													"key": "approvalParameters",
+													"value": "ut adipisicing nisi Duis"
+												},
+												{
+													"key": "complete",
+													"value": "true"
+												},
+												{
+													"key": "name",
+													"value": "aliquip"
+												},
+												{
+													"key": "user_oauth_approval",
+													"value": "aliquip"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/authorize?approvalParameters=ut adipisicing nisi Duis&complete=true&name=aliquip&user_oauth_approval=aliquip",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"authorize"
+											],
+											"query": [
+												{
+													"key": "approvalParameters",
+													"value": "ut adipisicing nisi Duis"
+												},
+												{
+													"key": "complete",
+													"value": "true"
+												},
+												{
+													"key": "name",
+													"value": "aliquip"
+												},
+												{
+													"key": "user_oauth_approval",
+													"value": "aliquip"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "authorize",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/oauth/authorize?complete=true&name=aliquip&parameters=ut adipisicing nisi Duis",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"oauth",
+										"authorize"
+									],
+									"query": [
+										{
+											"key": "complete",
+											"value": "true"
+										},
+										{
+											"key": "name",
+											"value": "aliquip"
+										},
+										{
+											"key": "parameters",
+											"value": "ut adipisicing nisi Duis",
+											"description": "(Required) parameters"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/authorize?complete=true&name=aliquip&parameters=ut adipisicing nisi Duis",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"authorize"
+											],
+											"query": [
+												{
+													"key": "complete",
+													"value": "true"
+												},
+												{
+													"key": "name",
+													"value": "aliquip"
+												},
+												{
+													"key": "parameters",
+													"value": "ut adipisicing nisi Duis"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/authorize?complete=true&name=aliquip&parameters=ut adipisicing nisi Duis",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"authorize"
+											],
+											"query": [
+												{
+													"key": "complete",
+													"value": "true"
+												},
+												{
+													"key": "name",
+													"value": "aliquip"
+												},
+												{
+													"key": "parameters",
+													"value": "ut adipisicing nisi Duis"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Created",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/authorize?complete=true&name=aliquip&parameters=ut adipisicing nisi Duis",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"authorize"
+											],
+											"query": [
+												{
+													"key": "complete",
+													"value": "true"
+												},
+												{
+													"key": "name",
+													"value": "aliquip"
+												},
+												{
+													"key": "parameters",
+													"value": "ut adipisicing nisi Duis"
+												}
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/authorize?complete=true&name=aliquip&parameters=ut adipisicing nisi Duis",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"authorize"
+											],
+											"query": [
+												{
+													"key": "complete",
+													"value": "true"
+												},
+												{
+													"key": "name",
+													"value": "aliquip"
+												},
+												{
+													"key": "parameters",
+													"value": "ut adipisicing nisi Duis"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/authorize?complete=true&name=aliquip&parameters=ut adipisicing nisi Duis",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"authorize"
+											],
+											"query": [
+												{
+													"key": "complete",
+													"value": "true"
+												},
+												{
+													"key": "name",
+													"value": "aliquip"
+												},
+												{
+													"key": "parameters",
+													"value": "ut adipisicing nisi Duis"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "authorize",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/oauth/authorize?complete=true&name=aliquip&parameters=ut adipisicing nisi Duis",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"oauth",
+										"authorize"
+									],
+									"query": [
+										{
+											"key": "complete",
+											"value": "true"
+										},
+										{
+											"key": "name",
+											"value": "aliquip"
+										},
+										{
+											"key": "parameters",
+											"value": "ut adipisicing nisi Duis",
+											"description": "(Required) parameters"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/authorize?complete=true&name=aliquip&parameters=ut adipisicing nisi Duis",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"authorize"
+											],
+											"query": [
+												{
+													"key": "complete",
+													"value": "true"
+												},
+												{
+													"key": "name",
+													"value": "aliquip"
+												},
+												{
+													"key": "parameters",
+													"value": "ut adipisicing nisi Duis"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/authorize?complete=true&name=aliquip&parameters=ut adipisicing nisi Duis",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"authorize"
+											],
+											"query": [
+												{
+													"key": "complete",
+													"value": "true"
+												},
+												{
+													"key": "name",
+													"value": "aliquip"
+												},
+												{
+													"key": "parameters",
+													"value": "ut adipisicing nisi Duis"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/authorize?complete=true&name=aliquip&parameters=ut adipisicing nisi Duis",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"authorize"
+											],
+											"query": [
+												{
+													"key": "complete",
+													"value": "true"
+												},
+												{
+													"key": "name",
+													"value": "aliquip"
+												},
+												{
+													"key": "parameters",
+													"value": "ut adipisicing nisi Duis"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "No Content",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/authorize?complete=true&name=aliquip&parameters=ut adipisicing nisi Duis",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"authorize"
+											],
+											"query": [
+												{
+													"key": "complete",
+													"value": "true"
+												},
+												{
+													"key": "name",
+													"value": "aliquip"
+												},
+												{
+													"key": "parameters",
+													"value": "ut adipisicing nisi Duis"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "authorize",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "OPTIONS",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/oauth/authorize?complete=true&name=aliquip&parameters=ut adipisicing nisi Duis",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"oauth",
+										"authorize"
+									],
+									"query": [
+										{
+											"key": "complete",
+											"value": "true"
+										},
+										{
+											"key": "name",
+											"value": "aliquip"
+										},
+										{
+											"key": "parameters",
+											"value": "ut adipisicing nisi Duis",
+											"description": "(Required) parameters"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "OPTIONS",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/authorize?complete=true&name=aliquip&parameters=ut adipisicing nisi Duis",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"authorize"
+											],
+											"query": [
+												{
+													"key": "complete",
+													"value": "true"
+												},
+												{
+													"key": "name",
+													"value": "aliquip"
+												},
+												{
+													"key": "parameters",
+													"value": "ut adipisicing nisi Duis"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "OPTIONS",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/authorize?complete=true&name=aliquip&parameters=ut adipisicing nisi Duis",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"authorize"
+											],
+											"query": [
+												{
+													"key": "complete",
+													"value": "true"
+												},
+												{
+													"key": "name",
+													"value": "aliquip"
+												},
+												{
+													"key": "parameters",
+													"value": "ut adipisicing nisi Duis"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "No Content",
+									"originalRequest": {
+										"method": "OPTIONS",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/authorize?complete=true&name=aliquip&parameters=ut adipisicing nisi Duis",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"authorize"
+											],
+											"query": [
+												{
+													"key": "complete",
+													"value": "true"
+												},
+												{
+													"key": "name",
+													"value": "aliquip"
+												},
+												{
+													"key": "parameters",
+													"value": "ut adipisicing nisi Duis"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "OPTIONS",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/authorize?complete=true&name=aliquip&parameters=ut adipisicing nisi Duis",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"authorize"
+											],
+											"query": [
+												{
+													"key": "complete",
+													"value": "true"
+												},
+												{
+													"key": "name",
+													"value": "aliquip"
+												},
+												{
+													"key": "parameters",
+													"value": "ut adipisicing nisi Duis"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "authorize",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/oauth/authorize?complete=true&name=aliquip&parameters=ut adipisicing nisi Duis",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"oauth",
+										"authorize"
+									],
+									"query": [
+										{
+											"key": "complete",
+											"value": "true"
+										},
+										{
+											"key": "name",
+											"value": "aliquip"
+										},
+										{
+											"key": "parameters",
+											"value": "ut adipisicing nisi Duis",
+											"description": "(Required) parameters"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/authorize?complete=true&name=aliquip&parameters=ut adipisicing nisi Duis",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"authorize"
+											],
+											"query": [
+												{
+													"key": "complete",
+													"value": "true"
+												},
+												{
+													"key": "name",
+													"value": "aliquip"
+												},
+												{
+													"key": "parameters",
+													"value": "ut adipisicing nisi Duis"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "No Content",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/authorize?complete=true&name=aliquip&parameters=ut adipisicing nisi Duis",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"authorize"
+											],
+											"query": [
+												{
+													"key": "complete",
+													"value": "true"
+												},
+												{
+													"key": "name",
+													"value": "aliquip"
+												},
+												{
+													"key": "parameters",
+													"value": "ut adipisicing nisi Duis"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/authorize?complete=true&name=aliquip&parameters=ut adipisicing nisi Duis",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"authorize"
+											],
+											"query": [
+												{
+													"key": "complete",
+													"value": "true"
+												},
+												{
+													"key": "name",
+													"value": "aliquip"
+												},
+												{
+													"key": "parameters",
+													"value": "ut adipisicing nisi Duis"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/authorize?complete=true&name=aliquip&parameters=ut adipisicing nisi Duis",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"authorize"
+											],
+											"query": [
+												{
+													"key": "complete",
+													"value": "true"
+												},
+												{
+													"key": "name",
+													"value": "aliquip"
+												},
+												{
+													"key": "parameters",
+													"value": "ut adipisicing nisi Duis"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "confirm access",
+					"item": [
+						{
+							"name": "getAccessConfirmation",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/oauth/confirm_access",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"oauth",
+										"confirm_access"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/confirm_access",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"confirm_access"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/confirm_access",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"confirm_access"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/confirm_access",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"confirm_access"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/confirm_access",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"confirm_access"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "getAccessConfirmation",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "HEAD",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/oauth/confirm_access",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"oauth",
+										"confirm_access"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "HEAD",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/confirm_access",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"confirm_access"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "No Content",
+									"originalRequest": {
+										"method": "HEAD",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/confirm_access",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"confirm_access"
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "HEAD",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/confirm_access",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"confirm_access"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "HEAD",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/confirm_access",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"confirm_access"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "getAccessConfirmation",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/oauth/confirm_access",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"oauth",
+										"confirm_access"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/confirm_access",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"confirm_access"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/confirm_access",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"confirm_access"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Created",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/confirm_access",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"confirm_access"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/confirm_access",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"confirm_access"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/confirm_access",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"confirm_access"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "getAccessConfirmation",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/oauth/confirm_access",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"oauth",
+										"confirm_access"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/confirm_access",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"confirm_access"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/confirm_access",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"confirm_access"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/confirm_access",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"confirm_access"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Created",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/confirm_access",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"confirm_access"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/confirm_access",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"confirm_access"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "getAccessConfirmation",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/oauth/confirm_access",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"oauth",
+										"confirm_access"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/confirm_access",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"confirm_access"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/confirm_access",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"confirm_access"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "No Content",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/confirm_access",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"confirm_access"
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/confirm_access",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"confirm_access"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "getAccessConfirmation",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "OPTIONS",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/oauth/confirm_access",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"oauth",
+										"confirm_access"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "OPTIONS",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/confirm_access",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"confirm_access"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "No Content",
+									"originalRequest": {
+										"method": "OPTIONS",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/confirm_access",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"confirm_access"
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "OPTIONS",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/confirm_access",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"confirm_access"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "OPTIONS",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/confirm_access",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"confirm_access"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "getAccessConfirmation",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/oauth/confirm_access",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"oauth",
+										"confirm_access"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/confirm_access",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"confirm_access"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/confirm_access",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"confirm_access"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "No Content",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/confirm_access",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"confirm_access"
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/confirm_access",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"confirm_access"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "error",
+					"item": [
+						{
+							"name": "handleError",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/oauth/error",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"oauth",
+										"error"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/error",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"error"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/error",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"error"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/error",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"error"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/error",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"error"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "handleError",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "HEAD",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/oauth/error",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"oauth",
+										"error"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "HEAD",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/error",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"error"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "HEAD",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/error",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"error"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "No Content",
+									"originalRequest": {
+										"method": "HEAD",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/error",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"error"
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "HEAD",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/error",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"error"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "handleError",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/oauth/error",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"oauth",
+										"error"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/error",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"error"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/error",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"error"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/error",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"error"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Created",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/error",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"error"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/error",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"error"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "handleError",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/oauth/error",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"oauth",
+										"error"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Created",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/error",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"error"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/error",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"error"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/error",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"error"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/error",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"error"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/error",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"error"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "handleError",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/oauth/error",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"oauth",
+										"error"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/error",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"error"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/error",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"error"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "No Content",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/error",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"error"
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/error",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"error"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "handleError",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "OPTIONS",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/oauth/error",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"oauth",
+										"error"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "No Content",
+									"originalRequest": {
+										"method": "OPTIONS",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/error",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"error"
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "OPTIONS",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/error",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"error"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "OPTIONS",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/error",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"error"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "OPTIONS",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/error",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"error"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "handleError",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/oauth/error",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"oauth",
+										"error"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "No Content",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/error",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"error"
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/error",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"error"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/error",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"error"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/error",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"error"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "token",
+					"item": [
+						{
+							"name": "getAccessToken",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/oauth/token?name=aliquip&parameters=ut adipisicing nisi Duis",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"oauth",
+										"token"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "aliquip"
+										},
+										{
+											"key": "parameters",
+											"value": "ut adipisicing nisi Duis",
+											"description": "(Required) parameters"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/token?name=aliquip&parameters=ut adipisicing nisi Duis",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"token"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "aliquip"
+												},
+												{
+													"key": "parameters",
+													"value": "ut adipisicing nisi Duis"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/token?name=aliquip&parameters=ut adipisicing nisi Duis",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"token"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "aliquip"
+												},
+												{
+													"key": "parameters",
+													"value": "ut adipisicing nisi Duis"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/token?name=aliquip&parameters=ut adipisicing nisi Duis",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"token"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "aliquip"
+												},
+												{
+													"key": "parameters",
+													"value": "ut adipisicing nisi Duis"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/token?name=aliquip&parameters=ut adipisicing nisi Duis",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"token"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "aliquip"
+												},
+												{
+													"key": "parameters",
+													"value": "ut adipisicing nisi Duis"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "postAccessToken",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status test\", function () {\r",
+											"   var jsonData = JSON.parse(responseBody);\r",
+											"postman.setEnvironmentVariable(\"token\", jsonData.access_token);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "devglan-secret",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "devglan-client",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "ADMIN",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "user1234",
+											"type": "text"
+										},
+										{
+											"key": "grant_type",
+											"value": "password",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/oauth/token",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"oauth",
+										"token"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/token?name=aliquip&parameters=ut adipisicing nisi Duis",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"token"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "aliquip"
+												},
+												{
+													"key": "parameters",
+													"value": "ut adipisicing nisi Duis"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Created",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/token?name=aliquip&parameters=ut adipisicing nisi Duis",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"token"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "aliquip"
+												},
+												{
+													"key": "parameters",
+													"value": "ut adipisicing nisi Duis"
+												}
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/token?name=aliquip&parameters=ut adipisicing nisi Duis",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"token"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "aliquip"
+												},
+												{
+													"key": "parameters",
+													"value": "ut adipisicing nisi Duis"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/token?name=aliquip&parameters=ut adipisicing nisi Duis",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"token"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "aliquip"
+												},
+												{
+													"key": "parameters",
+													"value": "ut adipisicing nisi Duis"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/oauth/token?name=aliquip&parameters=ut adipisicing nisi Duis",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"oauth",
+												"token"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "aliquip"
+												},
+												{
+													"key": "parameters",
+													"value": "ut adipisicing nisi Duis"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "checkToken",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": true,
+									"type": "boolean"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/oauth/check_token?token=aliquip",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"oauth",
+								"check_token"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "aliquip",
+									"description": "(Required) token"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/oauth/check_token?token=aliquip",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"oauth",
+										"check_token"
+									],
+									"query": [
+										{
+											"key": "token",
+											"value": "aliquip"
+										}
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/oauth/check_token?token=aliquip",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"oauth",
+										"check_token"
+									],
+									"query": [
+										{
+											"key": "token",
+											"value": "aliquip"
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/oauth/check_token?token=aliquip",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"oauth",
+										"check_token"
+									],
+									"query": [
+										{
+											"key": "token",
+											"value": "aliquip"
+										}
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/oauth/check_token?token=aliquip",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"oauth",
+										"check_token"
+									],
+									"query": [
+										{
+											"key": "token",
+											"value": "aliquip"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/oauth/check_token?token=aliquip",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"oauth",
+										"check_token"
+									],
+									"query": [
+										{
+											"key": "token",
+											"value": "aliquip"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "getKey",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": true,
+									"type": "boolean"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/oauth/token_key?name=aliquip",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"oauth",
+								"token_key"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "aliquip"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/oauth/token_key?name=aliquip",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"oauth",
+										"token_key"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "aliquip"
+										}
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/oauth/token_key?name=aliquip",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"oauth",
+										"token_key"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "aliquip"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/oauth/token_key?name=aliquip",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"oauth",
+										"token_key"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "aliquip"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "Authorization",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/oauth/token_key?name=aliquip",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"oauth",
+										"token_key"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "aliquip"
+										}
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "actuator",
+			"item": [
+				{
+					"name": "health",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/actuator/health",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"actuator",
+								"health"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/actuator/info",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"actuator",
+								"info"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "metrics",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/actuator/metrics",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"actuator",
+								"metrics"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "//localhost:8080/",
+			"type": "string"
+		}
+	]
+}

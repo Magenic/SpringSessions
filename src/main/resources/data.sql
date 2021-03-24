@@ -1,0 +1,2 @@
+insert into User (id, username, password) values (1, 'john123', '$2a$04$4PzM5qxzsrUy5lXrHxTKmeIeycBKq/ToMaMLsVKu4JxF55nXK9tyi');
+insert into User (id, username, password) values (2, 'jane234', '$2a$04$bCHyzU.LzJbIjXRsSw4Vv.5c51YImswYNodHOjr.0flBdj/fKenDO');
